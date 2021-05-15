@@ -13,9 +13,9 @@ namespace MovieWebMVC.Controllers
             return "This is my default action";
         }
 
-        public string Welcome()
+        public string Welcome(string name, int age)
         {
-            return "This is the welcome action method...";
+            return $"Welcome I am {name} and I am {age} years old";
         }
     }
 }
