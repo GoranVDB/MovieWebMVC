@@ -13,9 +13,10 @@ namespace MovieWebMVC.Controllers
             return View();
         }
 
-        public IActionResult Welcome(string name)
+        public IActionResult Welcome(string name, int numTimes = 1)
         {
-            ViewData["name"] = name;
+            ViewData["Message"] = "Hello " + name;
+            ViewData["numTimes"] = numTimes;
 
             return View();
         }
