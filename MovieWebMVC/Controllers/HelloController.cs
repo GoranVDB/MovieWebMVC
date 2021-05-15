@@ -13,9 +13,11 @@ namespace MovieWebMVC.Controllers
             return View();
         }
 
-        public string Welcome(string name, int age)
+        public IActionResult Welcome(string name)
         {
-            return $"Welcome I am {name} and I am {age} years old";
+            ViewData["name"] = name;
+
+            return View();
         }
     }
 }
