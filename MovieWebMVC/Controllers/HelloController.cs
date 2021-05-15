@@ -20,5 +20,12 @@ namespace MovieWebMVC.Controllers
 
             return View();
         }
+
+        public IActionResult Today()
+        {
+            ViewData["Message"] = $"De datum van vandaag is {DateTime.Now.ToShortDateString()} en het uur {DateTime.Now.ToShortTimeString()}";
+            
+            return View();
+        }
     }
 }
