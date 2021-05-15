@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MovieWebMVC.Domain;
+using MovieWebMVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,8 @@ namespace MovieWebMVC.Controllers
                 Director = "Jon Favreau",
                 ReleaseDate = new DateTime(1994, 5, 4)
             };
-            return View(movie);
+
+            return View(new MovieDetailViewModel() { Title = movie.Title, Description = movie.Description, ReleaseDate = movie.ReleaseDate });
         }
     }
 }
